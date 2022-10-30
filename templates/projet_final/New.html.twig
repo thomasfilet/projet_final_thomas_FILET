@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="fond_form_new h-screen">
+    <section class="bg-transparent w-full">
+        {{ include('projet_final/HeaderAdmin.html.twig') }}
+    </section>
+
+    <div class="flex justify-center items-center pb-1">
+        <div>
+            <h1 class="text-white font-bold text-4xl text-center">New products</h1>
+        
+            <div class="w-96 rounded-xl bg-transparent pt-4 px-8">
+                {{form(form)}}
+            <div>
+        </div>
+    </div>
+</section>
+{% endblock %}

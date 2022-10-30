@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="fond_co h-screen">
+    <div>
+        {{ include('projet_final/HeaderUser.html.twig') }}
+    </div>
+    
+    <div class="flex justify-center mt-24">
+        <div class="w-1/4 border px-4 py-4 -ml-12">
+            <h1 class="mb-4 text-2xl text-center underline">Register</h1>
+            {{ form_start(registrationForm) }}
+
+            {{ form_row(registrationForm.email) }}
+
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Password'
+            }) }}
+
+            {{ form_row(registrationForm.agreeTerms) }}
+
+            <div class="flex justify-center">
+                <button type="submit" class="px-4">Register</button>
+            <div>
+            {{ form_end(registrationForm) }}
+        </div>
+    </div>
+<section>
+{% endblock %}

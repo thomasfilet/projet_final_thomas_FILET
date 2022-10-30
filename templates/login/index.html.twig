@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="fond_co h-screen">
+    <div>
+        {{ include('projet_final/HeaderUser.html.twig') }}
+    </div>
+    
+
+    <div class="flex justify-center">
+        <div class="border w-1/4 mt-24 py-10 px-4">
+            <h1 class="mb-4 text-3xl text-center">Login</h1>
+            <form action="{{ path('app_login') }}" method="post">
+                <div class="my-2">
+                    <label class="text-2xl" for="username">Email:</label>
+                    <br>
+                    <input class="text-black w-full rounded-sm mt-2 px-2 text-xl py-1" type="text" id="username" name="_username" value="{{ last_username }}"/>
+                </div>
+
+                <div class="mt-4 mb-4">
+                    <label  class="text-2xl" for="password">Password:</label>
+                    <br>
+                    <input class="text-black w-full rounded-sm mt-2 px-2 text-xl py-1" type="password" id="password" name="_password"/>
+                </div>
+
+                {% if error %}
+                    <h2 class="HeaderAdmin_text text-center mx-16 color_erreur text-xl w-60">{{ error.messageKey|trans(error.messageData, 'security') }}</h2>
+
+                {% endif %}
+
+                <div class="flex justify-center mt-6">
+                    <button class="text-xl" type="submit">login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<section>
+{% endblock %}

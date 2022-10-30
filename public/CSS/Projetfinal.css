@@ -1,0 +1,186 @@
+
+/* Header User */
+.bar{
+    height: 1px;
+    background-color: rgb(255, 255, 255)
+}
+
+
+/* Homepage User */
+.UserHomepage{
+    background-image: url("https://images4.alphacoders.com/561/561686.jpg");
+    background-size: cover;
+}
+
+
+.all{
+height:250px;
+background: linear-gradient(145deg, #ebe1e1, #ebe1e1);
+}
+
+
+.width_a{
+    width:250px;
+}
+
+.titre_color{
+    color: #c59700;
+    text-decoration: none;
+}
+
+
+.info{
+    opacity: 0.0;
+    position : absolute;
+    top: 0px;
+    backdrop-filter: blur(15px);
+}
+
+.info:hover{
+    opacity: 1; 
+    border: 1px solid white;
+    transition-duration: 650ms;
+}
+
+
+
+
+/* Formulaire */
+.fond_form_new{
+    background-image: url("https://static9.depositphotos.com/1460789/1096/v/600/depositphotos_10968319-stock-illustration-seamless-black-wallpaper-style-retro.jpg");
+}
+
+
+
+/* connexion page */
+.fond_co{
+    background-image: url("https://img.freepik.com/photos-premium/texture-marbre-noir-naturel-pour-fond-ecran-carreaux-peau-fond-luxueux_24076-573.jpg?w=2000");
+    background-size: cover ;
+}
+
+
+.bouton_co{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 18px;
+}
+
+
+.bouton_co:hover{
+    color:black;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.color_erreur{
+    color:rgb(255, 13, 13)
+}
+
+
+/* Header Admin */
+.HeaderAdmin_text{
+    backdrop-filter: blur(15px);
+}
+
+.height_titre_headerAdmin{
+    height: 500px;
+}
+
+.bouton_coHeader{
+    color:white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.bouton_coHeader:hover{
+    color:black;
+    background-color: white;
+}
+
+/* Homepage Admin */
+.header_admin{
+    background-image: url("https://images2.alphacoders.com/236/23680.jpg");
+    background-size: cover;
+}
+
+
+
+
+
+/* Page infoProduct */
+.all_infoProduit{
+    height:500px;
+    width: 475px;
+    background: linear-gradient(145deg, #ebe1e1, #ebe1e1);
+}
+
+.container {
+    width: 1200px;
+    display: flex;
+    overflow-x: auto;
+    height: 400px
+  }
+
+.item {
+    flex-shrink: 0;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.imgage{
+    width: 250px;
+    height:250px;
+    margin: 20px 10px;
+    display: inline;
+
+}
+
+
+
+/* importation ecriture */
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Space+Mono&family=Yrsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
+
+
+
+/* Css pour les div / a / ... */
+h1{
+    font-family: 'Noticia Text', serif;
+}
+
+h2, label, a{
+    font-family: 'Space Mono', monospace;
+}
+
+h3, input{
+    font-family: 'Yrsa', serif;
+}
+
+a{
+    transition-duration: 800ms;
+}
+
+
+button{
+    color:white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 2px solid white;
+}
+
+button:hover{
+    color:black;
+    background-color: white;
+    transition-duration: 800ms;
+}
+
+
+
+

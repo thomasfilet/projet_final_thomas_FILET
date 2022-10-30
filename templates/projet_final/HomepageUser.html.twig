@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <section class="UserHomepage h-screen w-full">
+        {{ include('projet_final/HeaderUser.html.twig') }}
+    </section>
+
+    <section id="montre" class="bg-black h-full ">
+        <h1 class="text-white text-4xl text-center pt-16 underline">Our watches :</h1>
+        <div class="flex justify-center py-20 ml-20">    
+            <div class="grid grid-cols-3 gap-8 w-3/4">
+                {% for montre in all %}
+
+                <div class="width_a relative">
+                    <div class="flex justify-center">
+                        <div class="px-2">
+                            <img class="all mt-2" src="{{montre.getImage}}" alt="">
+                            <div class="w-full mt-8 text-center">
+                                <h2 class="text-xl font-bold text-white pt-2 uppercase"> {{montre.getModel}}</h1>
+                                <h3 class="titre_color text-lg pb-2">{{montre.getMake}}</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="w-full h-full info flex justify-center items-center"   href="{{path('app_montre_id',{id:montre.getId})}}">
+                        <div class="w-full mt-8 text-center">
+                                <h2 class="text-2xl font-bold text-white pt-2 uppercase"> {{montre.getModel}}</h1>
+                                <h3 class="titre_color text-lg pb-2">{{montre.getMake}}</h1>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        {{ include('projet_final/footer.html.twig') }}
+    </section>
+{% endblock %}
+
+
+    
+
+    

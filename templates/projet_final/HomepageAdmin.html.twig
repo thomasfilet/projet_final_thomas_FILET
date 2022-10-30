@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="header_admin h-screen w-full mb-20">
+        {{ include('projet_final/HeaderAdmin.html.twig') }}
+        <div class="height_titre_headerAdmin w-full flex justify-center items-center ">
+            <div class="">
+                <h1 class="text_shadow text-center text-4xl text-white font-bold">You are in </h1>
+                <h1 class=" text_shadow text-center text-4xl text-white font-bold">admin mode</h1>
+            </div>
+        </div>
+    </section>
+    
+    <h1 class="text-center font-bold text-4xl text-white underline mb-20">Our products: </h1>
+    <a class="text-white border pl-4 bouton_co ml-96 flex items-center w-24" href="{{path('app_new')}}">
+        <h2 class="text-lg">New</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+    </a>
+
+    {% for montre in all %}
+            <div class="flex justify-center my-8">
+                <div class="border w-2/4">
+                    <div class="border flex justify-between">
+                        <div class="flex justify-center items-center ml-4">
+                            <img class="h-10 w-10 mt-2" src="{{montre.getImage}}" alt="">
+                            <div class="mx-4">
+                                <h2 class="text-xl text-white font-bold pt-2 uppercase"> {{montre.getModel}}</h1>
+                                <h3 class="titre_color text-sm pb-2">{{montre.getMake}}</h1>
+                            </div>
+                        </div>
+                        <div class="pt-6 mx-8">
+                            <a class="text-white border px-4 bouton_co mx-6" href="{{path('montre_delete',{id:montre.getId}) }}">Delete</a>
+                            <a class="text-white border px-4 bouton_co" href="{{path('montre_edit',{id:montre.getId}) }}">Update</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>       
+    {% endfor %}
+
+    <section class="mt-16">
+        {{ include('projet_final/footer.html.twig') }}
+    </section>
+
+{% endblock %}

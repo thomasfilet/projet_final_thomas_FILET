@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="flex justify-around pt-6 text-white">
+        <a href="{{path('app_homepageUser')}}">
+            <img class='w-8 h-8' src="https://www.logoarena.com/contestimages/public_new/3783/1670_1384351020_thefinestwatches3.png" alt="">
+        </a>
+
+        <div class="flex">
+            <div class="HeaderAdmin_text mx-4">
+                <a class="text-xl bouton_coHeader px-4 py-2" href="{{path('app_homepageAdmin')}}">Administrator</a>
+            </div>
+            <div class="HeaderAdmin_text">
+                <a class="text-xl bouton_coHeader px-4 py-2" href="{{path('app_register')}}">Register</a>
+            </div>
+        </div>
+
+        
+        <a class="text-xl bouton_coHeader px-4 py-2" href="#montre">Access to the sites</a>
+        
+
+    </div>
+    <div class="flex justify-center mt-6">
+        <div class="w-4/5 text-center bar"></div>
+    </div>
+{% endblock %}
+
+
